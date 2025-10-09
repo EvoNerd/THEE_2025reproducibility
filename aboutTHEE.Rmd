@@ -1,0 +1,15 @@
+---
+title: "About THEE Research Practical"
+#author: "Ana-Hermina Ghenu"
+#date: "2025-10-09"
+output:
+  html_document
+---
+
+The reproducibility module housed on this website is part of a research practical (i.e., a 3-week block course) on theoretical ecology and evolution that was offered at the University of Bern in October 2025 (465990-HS2025-0-Theoretical ecology and evolution, research practical).
+
+## Relevant Links
+
+Here's a link to the **official course content** on ILIAS: [click here to go to ilias](https://ilias.unibe.ch/ilias.php?baseClass=ilrepositorygui&ref_id=3372266)
+
+Here's a link to the course on the Division of Theoretical Ecology & Evolution's website at the University of Bern: [click here to go to courses by thee.iee.unibe.ch](https://www.thee.iee.unibe.ch/studies/courses/index_eng.html)

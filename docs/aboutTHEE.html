@@ -11,7 +11,7 @@
 
 
 
-<title>My website</title>
+<title>About THEE Research Practical</title>
 
 <script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -29,6 +29,9 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
@@ -209,6 +212,69 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
 
 </head>
 
@@ -216,6 +282,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -255,30 +331,32 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">My website</h1>
+<h1 class="title toc-ignore">About THEE Research Practical</h1>
 
 </div>
 
 
-<p><strong>Welcome to my website!</strong></p>
-<div id="getting-started" class="section level1">
-<h1>Getting started</h1>
-<p>Click the links in the menu above to look around.</p>
+<p>The reproducibility module housed on this website is part of a
+research practical (i.e., a 3-week block course) on theoretical ecology
+and evolution that was offered at the University of Bern in October 2025
+(465990-HS2025-0-Theoretical ecology and evolution, research
+practical).</p>
+<div id="relevant-links" class="section level2">
+<h2>Relevant Links</h2>
+<p>Here’s a link to the <strong>official course content</strong> on
+ILIAS: <a
+href="https://ilias.unibe.ch/ilias.php?baseClass=ilrepositorygui&amp;ref_id=3372266">click
+here to go to ilias</a></p>
+<p>Here’s a link to the course on the Division of Theoretical Ecology
+&amp; Evolution’s website at the University of Bern: <a
+href="https://www.thee.iee.unibe.ch/studies/courses/index_eng.html">click
+here to go to courses by thee.iee.unibe.ch</a></p>
 </div>
-<div id="notes" class="section level1">
-<h1>Notes</h1>
-<p>This website is a collection of regular (R)Markdown document, so you
-can use all the usual formatting.</p>
-<p>If you are new to R Markdown, you can learn more about it <a
-href="https://rmarkdown.rstudio.com/">on the R Markdown website</a>.</p>
-<p>I also have a discussion of R Markdown and reproducibility <a
-href="https://andreashandel.github.io/MADAcourse/1e_ToolsforReproducibility.html">on
-one of my course pages</a>. You’ll find additional links to potentially
-useful R Markdown (and Github) resources there.</p>
+
+
+
 </div>
-
-
-
+</div>
 
 </div>
 
@@ -311,6 +389,35 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
