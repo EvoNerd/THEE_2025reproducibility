@@ -11,7 +11,7 @@
 
 
 
-<title>My website</title>
+<title>Reproducibility in Action!</title>
 
 <script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -29,6 +29,9 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
@@ -209,6 +212,69 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
 
 </head>
 
@@ -216,6 +282,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -255,30 +331,190 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">My website</h1>
+<h1 class="title toc-ignore">Reproducibility in Action!</h1>
 
 </div>
 
 
-<p><strong>Welcome to my website!</strong></p>
-<div id="getting-started" class="section level1">
-<h1>Getting started</h1>
-<p>Click the links in the menu above to look around.</p>
+<style>
+/* Increase vertical space between TOC items */
+.tocify-item.list-group-item {
+  padding-top: 12px;
+  padding-bottom: 20px;
+  line-height: 1.6;
+}
+</style>
+<div id="learning-goals" class="section level1">
+<h1>Learning Goals</h1>
+<ul>
+<li><p>What is reproducibility and why should I care?</p></li>
+<li><p>4 habits for reproducible research<br />
+<em>Bonus!:</em> some activities to refresh your R coding
+skills</p></li>
+<li><p>Git and GitHub make it easy to track changes &amp;
+collaborate<br />
+<br />
+<br />
+</p></li>
+</ul>
 </div>
-<div id="notes" class="section level1">
-<h1>Notes</h1>
-<p>This website is a collection of regular (R)Markdown document, so you
-can use all the usual formatting.</p>
-<p>If you are new to R Markdown, you can learn more about it <a
-href="https://rmarkdown.rstudio.com/">on the R Markdown website</a>.</p>
-<p>I also have a discussion of R Markdown and reproducibility <a
-href="https://andreashandel.github.io/MADAcourse/1e_ToolsforReproducibility.html">on
-one of my course pages</a>. You’ll find additional links to potentially
-useful R Markdown (and Github) resources there.</p>
+<div id="what-is-reproducibility" class="section level1">
+<h1>What is Reproducibility?</h1>
+<p>Here we insert a slide deck explaining what is reproducibility<br />
+<br />
+<br />
+</p>
+<strong>Doing Research:</strong>
+<p align="center">
+<img src="figures/research_dream_reality.png" style="width:50.0%" />
+</p>
+<p>That’s okay! Having a plan and good habits helps us get closer to the
+dream :)<br />
+<br />
+<br />
+</p>
+<div id="doing-reproducible-research" class="section level2">
+<h2>Doing reproducible research</h2>
+<blockquote>
+<p><strong>Goal:</strong> being able to re-create the <em>data and
+analysis</em> so that you and others can (ideally) arrive at the
+<em>same interpretations</em> of your results.</p>
+</blockquote>
+<p>So, should we keep everything?</p>
+<p align="center">
+<img
+src="https://med.stanford.edu/content/dam/sm-news/images/2009/10/sustain-freezer-101909.jpg"
+style="width:35.0%" />
+</p>
+<p>Nobody wants to deal with this!<br />
+<br />
+<br />
+</p>
+</div>
+</div>
+<div id="habits-for-reproducible-research" class="section level1">
+<h1>Habits for Reproducible Research</h1>
+<blockquote>
+<p><strong>Goal:</strong> being able to re-create the <em>data and
+analysis</em> so that you and others can (ideally) arrive at the
+<em>same interpretations</em> of your results.</p>
+</blockquote>
+<p><del>Keep everything!</del></p>
+<p>Keep <em>almost</em> everything in such a way that you, or people
+after you, can (happily?) go back to it.</p>
+<p>4 reproducibility principles for achieving this are:</p>
+<ol>
+<li value="1">
+<strong>Annotate:</strong> explain what you’re doing and why.
+</li>
+<li value="3">
+<strong>Automate:</strong> make your decisions explicit by using code.
+</li>
+<li value="4">
+<strong>Share:</strong> provide access to your work.
+</li>
+<li value="2">
+<strong>Hoard:</strong> … you will still have to keep <em>almost</em>
+everything …
+</li>
+</ol>
+<p><br />
+<br />
+<br />
+<br />
+<br />
+<br />
+</p>
+<div id="annotate" class="section level2">
+<h2>1. Annotate
+<img src="https://libapps-au.s3-ap-southeast-2.amazonaws.com/accounts/1771/images/annotate.png" class="toc-icon" style="float: right; width: 25%; margin-left: 10px;" /></h2>
+<p><strong>Write explanations for your future
+collaborators</strong><br />
+What? How? <em>Why?!</em></p>
+<p><strong>Habits:</strong> use script headers, use meaningful &amp;
+human-readable names, comment your code</p>
+<p><strong>Tools:</strong> notebook documents (e.g., R Notebook (.Rmd)
+files in RStudio)</p>
+<p>Here we insert a slide deck with the activity<br />
+<br />
+<br />
+</p>
+</div>
+<div id="hoard" class="section level2">
+<h2>2. Hoard
+<img src="https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_t3BbtzxyAYqbfzPrSXHDX3IeUrRhU1jPOjjOAkW9k0k8IoG8cmFmbm09_SFb0YM7BZrY6Ji_JDYu9zrZQh1PYXO43WmHGH8S04Ib6NHl5UvVru5mKRtas-k50qmohmAw=s0-d" class="toc-icon" style="float: right; width: 25%; margin-left: 10px;" /></h2>
+<p><strong>Keep <em>almost</em> everything</strong></p>
+<p><strong>Habits:</strong> backup regularly (daily!), versions of
+software &amp; packages, store raw data &amp; intermediate steps in data
+processing, store code &amp; progress on code</p>
+<p><strong>Tools:</strong> backup software (e.g., OneDrive is free for
+UniBE students),<br />
+version control (e.g., git), online repositories (e.g., GitHub)</p>
+<p>Here we insert a slide deck with the activity<br />
+<br />
+<br />
+</p>
+</div>
+<div id="automate" class="section level2">
+<h2>3. Automate
+<img src="https://images.lumacdn.com/cdn-cgi/image/format=auto,fit=cover,dpr=2,background=white,quality=75,width=400,height=400/event-covers/yo/f21e0c96-387b-4142-be2b-cb5da5fbc84f.png" class="toc-icon" style="float: right; width: 25%; margin-left: 10px;" /></h2>
+<p><strong>Avoid manual manipulation</strong><br />
+waste of time &amp; error-prone<br />
+decisions are <u>not</u> explicit and can be inconsistent</p>
+<p><strong>Habits:</strong> find+replace, use a scripting language for
+your analyses, automatically save parameters in the filename.</p>
+<p><strong>Tools:</strong> notebook documents</p>
+<p>Here we insert a slide deck with the activity<br />
+<br />
+<br />
+</p>
+</div>
+<div id="share" class="section level2">
+<h2>4. Share
+<img src="https://assets.myket.ir/icons/large/com.appattitude.shareapp_f6f6c04e-10fb-4303-a952-0e783d3bfb38.png" class="toc-icon" style="float: right; width: 25%; margin-left: 10px;" /></h2>
+<p><strong>Fundamentally, research is about sharing</strong><br />
+with collaborators, with other scientists</p>
+<p><strong>Habits:</strong> think about your <u>audience</u> when
+analyzing (see annotate), share early and often</p>
+<p><strong>Tools:</strong> online repositories for data (e.g., Dryad),
+code (e.g., GitHub), and papers (e.g., EcoEvoRxiv)<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+</p>
+</div>
+<div id="reproducibility-principles" class="section level2">
+<h2>Reproducibility principles</h2>
+<ul>
+<li><strong>Annotate:</strong> explain what you’re doing and why.</li>
+<li><strong>Automate:</strong> make your decisions explicit by using
+code.</li>
+<li><strong>Share:</strong> provide access to your work.</li>
+<li><strong>Hoard:</strong> keep <em>almost</em> everything.</li>
+</ul>
+<p>By implementing these reproducibility principles, your workspace can
+be more like this:</p>
+<p align="center">
+<img
+src="https://assets.fishersci.com/TFS-Assets/CCG/product-images/F205638~p.eps-650.jpg"
+style="width:35.0%" />
+</p>
+<p>Here we insert a slide deck with the review.<br />
+<br />
+<br />
+</p>
+</div>
+</div>
+<div id="intro-to-github" class="section level1">
+<h1>Intro to Git(Hub)</h1>
 </div>
 
 
 
+</div>
+</div>
 
 </div>
 
@@ -311,6 +547,35 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
