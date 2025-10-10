@@ -1,4 +1,4 @@
-# THEE_2024reproducibility
+# THEE_2025reproducibility
 This project was created by **Ana-Hermina Ghenu** for the reproducibility module of the Theoretical Ecology and Evolution research practical (Fall 2024)
 
 Learning objectives:
