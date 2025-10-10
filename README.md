@@ -30,3 +30,5 @@ When you run reproducibility.Rmd, it will produce .csv files whose names will be
 # Contact
 This repository and its contents were developed and are maintained by Dr. Ana-Hermina Ghenu for Prof. Claudia Bank, Institute of Ecology & Evolution, University of Bern.
 If you have any questions or need any help regarding the project, please contact Hermina via their GitHub account (EvoNerd).
+
+*Note: check out the **website branch** if you are looking for the code to build and deploy the website.*
