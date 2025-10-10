@@ -1,4 +1,4 @@
-# THEE_2025reproducibility
+# THEE_2025reproducibility Website
 
 This branch hosts the (website used for the THEE reproducibility module) [https://evonerd.github.io/THEE_2025reproducibility/aboutTHEE.html]).
 
