@@ -343,6 +343,12 @@ div.tocify {
   padding-bottom: 20px;
   line-height: 1.6;
 }
+
+/* define colours used for action blocks & buttons */
+  :root {
+    --action-color: #FFDF64;
+    --action-contrast: #877b66;
+  }
 </style>
 <div id="learning-goals" class="section level1">
 <h1>Learning Goals</h1>
@@ -368,8 +374,8 @@ collaborate<br />
 <p align="center">
 <img src="figures/research_dream_reality.png" style="width:50.0%" />
 </p>
-<p>That’s okay! Having a plan and good habits helps us get closer to the
-dream :)<br />
+<p>That’s okay! Having a <strong>Data Management Plan</strong> and good
+habits helps us get closer to the dream :)<br />
 <br />
 <br />
 </p>
@@ -404,6 +410,7 @@ analysis</em> so that you and others can (ideally) arrive at the
 after you, can (happily?) go back to it.</p>
 <p>4 reproducibility principles for achieving this are:</p>
 <ol>
+<!-- Force the numbering to be out of order -->
 <li value="1">
 <strong>Annotate:</strong> explain what you’re doing and why.
 </li>
@@ -436,7 +443,7 @@ human-readable names, comment your code</p>
 <p><strong>Tools:</strong> notebook documents (e.g., R Notebook (.Rmd)
 files in RStudio)</p>
 <div id="time-for-action-annotate" class="section level3"
-style="background-color: #FFDF64; padding: 20px;">
+style="background-color: var(--action-color); padding: 20px;">
 <h3>Time for Action: Annotate!</h3>
 <p>Here we insert a slide deck with the activity</p>
 </div>
@@ -456,7 +463,7 @@ processing, store code &amp; progress on code</p>
 UniBE students),<br />
 version control (e.g., git), online repositories (e.g., GitHub)</p>
 <div id="time-for-action-hoard" class="section level3"
-style="background-color: #FFDF64; padding: 20px;">
+style="background-color: var(--action-color); padding: 20px;">
 <h3>Time for Action: Hoard!</h3>
 <p>The window below contains a function
 (<code>get.multiples1to10</code>) that multiplies the integers from 1 to
@@ -466,35 +473,40 @@ multiples of 3, from 3 to 30.</p>
 <p><strong>Run the code to convince yourself that it’s working
 properly.</strong></p>
 </div>
-<p><br />
-<!-- Reload Button --> <button id="reloadGoodCode"
-        style="float: right; margin-left: 10px; font-size: 20px; padding: 10px 25px; border-radius: 7px; border: none; background-color: #877b66; color: #FFDF64;">
-Please reload the original code! </button> <!-- iframe -->
-<iframe id="goodCode"
+<div>
+<!-- This block embeds an interactive R console via RDrr  -->
+<p><br> <!-- Reload Button on top right --> <button id="reloadGoodCode"
+        style="float: right; margin-left: 10px; font-size: 20px; padding: 10px 25px; border-radius: 7px; border: none; background-color: var(--action-contrast); color: var(--action-color);">
+Please reload the original code! </button>
+<!-- iframe (this is the R console) --> <iframe id="goodCode"
           src="https://rdrr.io/snippets/embed/?code=%23%20simple%20function%20to%20multiply%20integers%20from%201%20to%2010%20by%20parameter%20value%20(%22multiplier%22)%0Aget.multiples1to10%20%3C-%20function(multiplier)%7B%0A%20%20%20numbers%20%3C-%201%3A10%0A%20%20%20return(multiplier%20*%20numbers)%0A%7D%0A%0A%23%20display%20results%20for%20parameter%20value%20set%20to%203%0Acurrent_value%20%3C-%203%0Aresults%20%3C-%20get.multiples1to10(multiplier%20%3D%20current_value)%0Aprint(results)"
           width="100%" height="500" style="margin-top: 10px;" frameborder="0"></iframe></p>
 <!-- JavaScript -->
 <script>
+    // this makes the reload button work
     document.getElementById("reloadGoodCode").addEventListener("click", function () {
       const iframe = document.getElementById("goodCode");
       iframe.src = iframe.src; // forces the iframe to reload
     });
   </script>
-<p><br />
-</p>
-<div style="background-color: #FFDF64; padding: 20px;">
+<p><br></p>
+</div>
+<div style="background-color: var(--action-color); padding: 20px;">
 <p>The window below contains a buggy version of the same code.</p>
 <p><strong>Find the bug and fix it so the code runs
 properly.</strong></p>
 </div>
-<p><br />
-<!-- Reload Button --> <button id="reloadBuggyCode"
-        style="float: right; margin-left: 10px; font-size: 20px; padding: 10px 25px; border-radius: 7px; border: none; background-color: #877b66; color: #FFDF64;">
+<div>
+<!-- This block embeds an interactive R console via RDrr  -->
+<p><br> <!-- Reload Button on top right --> <button id="reloadBuggyCode"
+        style="float: right; margin-left: 10px; font-size: 20px; padding: 10px 25px; border-radius: 7px; border: none; background-color: var(--action-contrast); color: var(--action-color);">
 Please reload the original code! </button></p>
-<p><!-- iframe placeholder --> <iframe id="buggyCode"
+<p><!-- iframe placeholder (this is the R console) -->
+<iframe id="buggyCode"
           width="100%" height="500" style="margin-top: 10px;" frameborder="0"></iframe></p>
-<p><!-- Sample new bug Button --> <button id="sampleNewBug"
-        style="font-size: 20px; padding: 10px 25px; border-radius: 7px; border: none; background-color: #877b66; color: #FFDF64;">
+<p><!-- Sample new bug Button below everything -->
+<button id="sampleNewBug"
+        style="font-size: 20px; padding: 10px 25px; border-radius: 7px; border: none; background-color: var(--action-contrast); color: var(--action-color);">
 I fixed it :D Now give me a new bug to fix! </button></p>
 <!-- JavaScript -->
 <script>
@@ -504,8 +516,7 @@ I fixed it :D Now give me a new bug to fix! </button></p>
       iframe.src = iframe.src; // forces iframe to reload
     });
     
-    // randomly sample 1 buggy code
-      // first make a list of URLs with buggy codes
+    // a list of URLs with buggy codes
     const buggyList = ["https://rdrr.io/snippets/embed/?code=%23%20simple%20function%20to%20multiply%20integers%20from%201%20to%2010%20by%20parameter%20value%20(%22multiplier%22)%0Aget.multiples110%20%3C-%20function(multiplier)%7B%0A%20%20%20numbers%20%3C-%201%3A10%0A%20%20%20return(multiplier*numbers)%0A%7D%0A%0A%23%20display%20results%20for%20parameter%20value%20set%20to%203%0Acurrent_value%20%3C-%203%0Aresults%20%3C-%20get.multiples1to10(multiplier%20%3D%20current_value)%0Aprint(results)", // 1
                       "https://rdrr.io/snippets/embed/?code=%23%20simple%20function%20to%20multiply%20integers%20from%201%20to%2010%20by%20parameter%20value%20(%22multiplier%22)%0Aget.multiples1to10%20%3C-%20function(multiplier)%7B%0A%20%20%20numbers%20%3C-%201%3A10%0A%20%20%20return(multiplier*numbers)%0A%0A%0A%23%20display%20results%20for%20parameter%20value%20set%20to%203%0Acurrent_value%20%3C-%203%0Aresults%20%3C-%20get.multiples1to10(multiplier%20%3D%20current_value)%0Aprint(results)", // 2 
                       "https://rdrr.io/snippets/embed/?code=%23%20simple%20function%20to%20multiply%20integers%20from%201%20to%2010%20by%20parameter%20value%20(%22multiplier%22)%0Aget.multiples1to10%20%3C-%20function(multiplier)%7B%0A%20%20%20numbers%20%3C-%20c(1%2C10)%0A%20%20%20return(multiplier*numbers)%0A%7D%0A%0A%23%20display%20results%20for%20parameter%20value%20set%20to%203%0Acurrent_value%20%3C-%203%0Aresults%20%3C-%20get.multiples1to10(multiplier%20%3D%20current_value)%0Aprint(results)", // 8
@@ -552,15 +563,7 @@ I fixed it :D Now give me a new bug to fix! </button></p>
       document.getElementById("buggyCode").src = buggyList[theIndex];
     }
     
-    // a function to randomly sample a buggy code from the list of buggy codes
-    function getRandomBug() {
-      // sample a random number between 0 and 24
-      const randomIndex = (Math.floor(Math.random()*25));
-      // assign the randomly sampled URL directly to the src of the iframe
-      document.getElementById("buggyCode").src = buggyList[randomIndex];
-    }
-    
-    // Run when the window loads
+    // Get a random index when the window loads and display its URL
     window.onload = function () {
         getRandomIndex();
         updateBuggyURL();
@@ -574,6 +577,7 @@ I fixed it :D Now give me a new bug to fix! </button></p>
     });
 
   </script>
+</div>
 <p><br />
 <br />
 <br />

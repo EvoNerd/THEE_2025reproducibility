@@ -3,7 +3,7 @@
     "path": "~/GitHub/THEE_2025reproducibility/index.Rmd",
     "project_path": "index.Rmd",
     "type": "r_markdown",
-    "hash": "0",
+    "hash": "3041733419",
     "contents": "",
     "dirty": false,
     "created": 1760020973709.0,
@@ -12,18 +12,18 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "195,311",
-        "scrollLine": "195",
+        "cursorPosition": "77,48",
+        "scrollLine": "74",
         "rmdVisualMode": "false",
         "rmdVisualCollapsedChunks": "",
         "rmdVisualModeLocation": "2:0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1760086457,
+    "lastKnownWriteTime": 1760091563,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1760086457755,
+    "last_content_update": 1760091563802,
     "read_only": false,
     "read_only_alternatives": []
 }
