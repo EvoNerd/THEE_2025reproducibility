@@ -435,7 +435,12 @@ What? How? <em>Why?!</em></p>
 human-readable names, comment your code</p>
 <p><strong>Tools:</strong> notebook documents (e.g., R Notebook (.Rmd)
 files in RStudio)</p>
-<p>Here we insert a slide deck with the activity<br />
+<div id="time-for-action-annotate" class="section level3"
+style="background-color: #FFDF64; padding: 20px;">
+<h3>Time for Action: Annotate!</h3>
+<p>Here we insert a slide deck with the activity</p>
+</div>
+<p><br />
 <br />
 <br />
 </p>
@@ -450,7 +455,126 @@ processing, store code &amp; progress on code</p>
 <p><strong>Tools:</strong> backup software (e.g., OneDrive is free for
 UniBE students),<br />
 version control (e.g., git), online repositories (e.g., GitHub)</p>
-<p>Here we insert a slide deck with the activity<br />
+<div id="time-for-action-hoard" class="section level3"
+style="background-color: #FFDF64; padding: 20px;">
+<h3>Time for Action: Hoard!</h3>
+<p>The window below contains a function
+(<code>get.multiples1to10</code>) that multiplies the integers from 1 to
+10 (<code>1:10</code>) by a constant value (<code>multiplier</code>),
+which is currently set to <code>3</code>. So it should print out ten
+multiples of 3, from 3 to 30.</p>
+<p><strong>Run the code to convince yourself that it’s working
+properly.</strong></p>
+</div>
+<p><br />
+<!-- Reload Button --> <button id="reloadGoodCode"
+        style="float: right; margin-left: 10px; font-size: 20px; padding: 10px 25px; border-radius: 7px; border: none; background-color: #877b66; color: #FFDF64;">
+Please reload the original code! </button> <!-- iframe -->
+<iframe id="goodCode"
+          src="https://rdrr.io/snippets/embed/?code=%23%20simple%20function%20to%20multiply%20integers%20from%201%20to%2010%20by%20parameter%20value%20(%22multiplier%22)%0Aget.multiples1to10%20%3C-%20function(multiplier)%7B%0A%20%20%20numbers%20%3C-%201%3A10%0A%20%20%20return(multiplier%20*%20numbers)%0A%7D%0A%0A%23%20display%20results%20for%20parameter%20value%20set%20to%203%0Acurrent_value%20%3C-%203%0Aresults%20%3C-%20get.multiples1to10(multiplier%20%3D%20current_value)%0Aprint(results)"
+          width="100%" height="500" style="margin-top: 10px;" frameborder="0"></iframe></p>
+<!-- JavaScript -->
+<script>
+    document.getElementById("reloadGoodCode").addEventListener("click", function () {
+      const iframe = document.getElementById("goodCode");
+      iframe.src = iframe.src; // forces the iframe to reload
+    });
+  </script>
+<p><br />
+</p>
+<div style="background-color: #FFDF64; padding: 20px;">
+<p>The window below contains a buggy version of the same code.</p>
+<p><strong>Find the bug and fix it so the code runs
+properly.</strong></p>
+</div>
+<p><br />
+<!-- Reload Button --> <button id="reloadBuggyCode"
+        style="float: right; margin-left: 10px; font-size: 20px; padding: 10px 25px; border-radius: 7px; border: none; background-color: #877b66; color: #FFDF64;">
+Please reload the original code! </button></p>
+<p><!-- iframe placeholder --> <iframe id="buggyCode"
+          width="100%" height="500" style="margin-top: 10px;" frameborder="0"></iframe></p>
+<p><!-- Sample new bug Button --> <button id="sampleNewBug"
+        style="font-size: 20px; padding: 10px 25px; border-radius: 7px; border: none; background-color: #877b66; color: #FFDF64;">
+I fixed it :D Now give me a new bug to fix! </button></p>
+<!-- JavaScript -->
+<script>
+    // reload the current buggy code
+    document.getElementById("reloadBuggyCode").addEventListener("click", function () {
+      const iframe = document.getElementById("buggyCode");
+      iframe.src = iframe.src; // forces iframe to reload
+    });
+    
+    // randomly sample 1 buggy code
+      // first make a list of URLs with buggy codes
+    const buggyList = ["https://rdrr.io/snippets/embed/?code=%23%20simple%20function%20to%20multiply%20integers%20from%201%20to%2010%20by%20parameter%20value%20(%22multiplier%22)%0Aget.multiples110%20%3C-%20function(multiplier)%7B%0A%20%20%20numbers%20%3C-%201%3A10%0A%20%20%20return(multiplier*numbers)%0A%7D%0A%0A%23%20display%20results%20for%20parameter%20value%20set%20to%203%0Acurrent_value%20%3C-%203%0Aresults%20%3C-%20get.multiples1to10(multiplier%20%3D%20current_value)%0Aprint(results)", // 1
+                      "https://rdrr.io/snippets/embed/?code=%23%20simple%20function%20to%20multiply%20integers%20from%201%20to%2010%20by%20parameter%20value%20(%22multiplier%22)%0Aget.multiples1to10%20%3C-%20function(multiplier)%7B%0A%20%20%20numbers%20%3C-%201%3A10%0A%20%20%20return(multiplier*numbers)%0A%0A%0A%23%20display%20results%20for%20parameter%20value%20set%20to%203%0Acurrent_value%20%3C-%203%0Aresults%20%3C-%20get.multiples1to10(multiplier%20%3D%20current_value)%0Aprint(results)", // 2 
+                      "https://rdrr.io/snippets/embed/?code=%23%20simple%20function%20to%20multiply%20integers%20from%201%20to%2010%20by%20parameter%20value%20(%22multiplier%22)%0Aget.multiples1to10%20%3C-%20function(multiplier)%7B%0A%20%20%20numbers%20%3C-%20c(1%2C10)%0A%20%20%20return(multiplier*numbers)%0A%7D%0A%0A%23%20display%20results%20for%20parameter%20value%20set%20to%203%0Acurrent_value%20%3C-%203%0Aresults%20%3C-%20get.multiples1to10(multiplier%20%3D%20current_value)%0Aprint(results)", // 8
+                      "https://rdrr.io/snippets/embed/?code=%23%20simple%20function%20to%20multiply%20integers%20from%201%20to%2010%20by%20parameter%20value%20(%22multiplier%22)%0Aget.multiples1to10%20%3C-%20function(multiplier)%7B%0A%20%20%20numbers%20%3C-%201%3A10%0A%20%20%20return(multiplier*numbers)%0A%7D%0A%0A%23%20display%20results%20for%20parameter%20value%20set%20to%203%0Acurrent_value%20-%203%0Aresults%20%3C-%20get.multiples1to10(multiplier%20%3D%20current_value)%0Aprint(results)", // 3
+                      "https://rdrr.io/snippets/embed/?code=%23%20simple%20function%20to%20multiply%20integers%20from%201%20to%2010%20by%20parameter%20value%20(%22multiplier%22)%0Aget.multiples1to10%20%3C-%20(multiplier)%7B%0A%20%20%20numbers%20%3C-%201%3A10%0A%20%20%20return(multiplier*numbers)%0A%7D%0A%0A%23%20display%20results%20for%20parameter%20value%20set%20to%203%0Acurrent_value%20%3C-%203%0Aresults%20%3C-%20get.multiples1to10(multiplier%20%3D%20current_value)%0Aprint(results)", // 4
+                      "https://rdrr.io/snippets/embed/?code=%23%20simple%20function%20to%20multiply%20integers%20from%201%20to%2010%20by%20parameter%20value%20(%22multiplier%22)%0Aget.multiples1to10%20%3C-%20function(multiplier)%7B%0A%20%20%20numbers%20%3C-%201%3A10%0A%20%20%20return(multiplier*numbers)%0A%7D%0A%0A%23%20display%20results%20for%20parameter%20value%20set%20to%203%0Acurrent_value%20%3C-%203%0Aresults%20%3C-%20get.multiples1to10(multiplier%20%3D%20curr_val)%0Aprint(results)", // 5
+                      "https://rdrr.io/snippets/embed/?code=%23%20simple%20function%20to%20multiply%20integers%20from%201%20to%2010%20by%20parameter%20value%20(%22multiplier%22)%0Aget.multiples1to10%20%3C-%20function(multiplier)%7B%0A%20%20%20numbers%20%3C-%205%3A-5%0A%20%20%20return(multiplier*numbers)%0A%7D%0A%0A%23%20display%20results%20for%20parameter%20value%20set%20to%203%0Acurrent_value%20%3C-%203%0Aresults%20%3C-%20get.multiples1to10(multiplier%20%3D%20current_value)%0Aprint(results)", // 21
+                      "https://rdrr.io/snippets/embed/?code=%23%20simple%20function%20to%20multiply%20integers%20from%201%20to%2010%20by%20parameter%20value%20(%22multiplier%22)%0Aget.multiples1to10%20%3C-%20function(multiplier)%7B%0A%20%20%20numbers%20%3C-%201%3A10%0A%20%20%20retrun(multiplier*numbers)%0A%7D%0A%0A%23%20display%20results%20for%20parameter%20value%20set%20to%203%0Acurrent_value%20%3C-%203%0Aresults%20%3C-%20get.multiples1to10(multiplier%20%3D%20current_value)%0Aprint(results)", // 6
+                      "https://rdrr.io/snippets/embed/?code=%23%20simple%20function%20to%20multiply%20integers%20from%201%20to%2010%20by%20parameter%20value%20(%22multiplier%22)%0Aget.multiples1to10%20%3C-%20function(multiplier)%7B%0A%20%20%20numbers%20%3C-%201%3A10%0A%20%20%20return(multiplier*numbers)%0A%7D%0A%0A%23%20display%20results%20for%20parameter%20value%20set%20to%203%0Acurrent_value%20%3C-%203%0Aresults%20%3C-%20get.multiples1to10%20multiplier%20%3D%20current_value%0Aprint(results)", // 7
+                      "https://rdrr.io/snippets/embed/?code=%23%20simple%20function%20to%20multiply%20integers%20from%201%20to%2010%20by%20parameter%20value%20(%22multiplier%22)%0Aget.multiples1to10%20%3C-%20function(multiplier)%7B%0A%20%20%20numbers%20%3C-%201%3A10%0A%20%20%20return(multiplier%2Fnumbers)%0A%7D%0A%0A%23%20display%20results%20for%20parameter%20value%20set%20to%203%0Acurrent_value%20%3C-%203%0Aresults%20%3C-%20get.multiples1to10(multiplier%20%3D%20current_value)%0Aprint(results)", // 9
+                      "https://rdrr.io/snippets/embed/?code=%23%20simple%20function%20to%20multiply%20integers%20from%201%20to%2010%20by%20parameter%20value%20(%22multiplier%22)%0Aget!multiples1to10%20%3C-%20function(multiplier)%7B%0A%20%20%20numbers%20%3C-%201%3A10%0A%20%20%20return(multiplier*numbers)%0A%7D%0A%0A%23%20display%20results%20for%20parameter%20value%20set%20to%203%0Acurrent_value%20%3C-%203%0Aresults%20%3C-%20get!multiples1to10(multiplier%20%3D%20current_value)%0Aprint(results)", // 10
+                      "https://rdrr.io/snippets/embed/?code=simple%20function%20to%20multiply%20integers%20from%201%20to%2010%20by%20parameter%20value%20(%22multiplier%22)%0Aget.multiples1to10%20%3C-%20function(multiplier)%7B%0A%20%20%20numbers%20%3C-%201%3A10%0A%20%20%20return(multiplier*numbers)%0A%7D%0A%0Adisplay%20results%20for%20parameter%20value%20set%20to%203%0Acurrent_value%20%3C-%203%0Aresults%20%3C-%20get.multiples1to10(multiplier%20%3D%20current_value)%0Aprint(results)", // 11
+                      "https://rdrr.io/snippets/embed/?code=%23%20simple%20function%20to%20multiply%20integers%20from%201%20to%2010%20by%20parameter%20value%20(%22multiplier%22)%0Aget.multiples1to10%20%3C-%20function(multiplier)%7B%0A%20%20%20numbers%20%3C-%201%3A10%0A%20%20%20return(multiplier*numbers)%0A%7D%0A%0A%23%20display%20results%20for%20parameter%20value%20set%20to%203%0Acurrent_value%20%3C-%20.3%0Aresults%20%3C-%20get.multiples1to10(multiplier%20%3D%20current_value)%0Aprint(results)", // 22
+                      "https://rdrr.io/snippets/embed/?code=%23%20simple%20function%20to%20multiply%20integers%20from%201%20to%2010%20by%20parameter%20value%20(%22multiplier%22)%0Aget.multiples1to10%20%3C-%20function(multiplier)%7B%0A%20%20%20numbers%20%3C-%201%3A10%0A%20%20%20return(multiplier*numbers)%0A%7D%0A%0A%23%20display%20results%20for%20parameter%20value%20set%20to%203%0Acurrent_value%20%3C-%203%0Aresults%20%3C-%20get.multiples1to10(multiplier%20%3D%20current_value%0Aprint(results)", // 12
+                      "https://rdrr.io/snippets/embed/?code=%23%20display%20results%20for%20parameter%20value%20set%20to%203%0Acurrent_value%20%3C-%203%0Aresults%20%3C-%20get.multiples1to10(multiplier%20%3D%20current_value)%0Aprint(results)%0A%0A%23%20simple%20function%20to%20multiply%20integers%20from%201%20to%2010%20by%20parameter%20value%20(%22multiplier%22)%0Aget.multiples1to10%20%3C-%20function(multiplier)%7B%0A%20%20%20numbers%20%3C-%201%3A10%0A%20%20%20return(multiplier*numbers)%0A%7D", // 13
+                      "https://rdrr.io/snippets/embed/?code=%23%20simple%20function%20to%20multiply%20integers%20from%201%20to%2010%20by%20parameter%20value%20(%22multiplier%22)%0Aget.multiples1to10%20%3C-%20function(multiplier%20%3C-%203)%7B%0A%20%20%20numbers%20%3C-%201%3A10%0A%20%20%20return(multiplier*numbers)%0A%7D%0A%0A%23%20display%20results%20for%20parameter%20value%20set%20to%203%0Acurrent_value%20%3C-%203%0Aresults%20%3C-%20get.multiples1to10(multiplier%20%3D%20current_value)%0Aprint(results)", // 14
+                      "https://rdrr.io/snippets/embed/?code=%23%20simple%20function%20to%20multiply%20integers%20from%201%20to%2010%20by%20parameter%20value%20(%22multiplier%22)%0Aget.multiples1to10%20%3C-%20function(multiplier)%7B%0A%20%20%20numbers%20%3C-%201%3A10%0A%20%20%20return(multiplier*numbers)%0A%7D%0A%0A%23%20display%20results%20for%20parameter%20value%20set%20to%203%0Acurrent_value%20%3C-%203%0Acurrent_value%20%3C%20get.multiples1to10(multiplier%20%3D%20current_value)%0Aprint(results)", // 23
+                      "https://rdrr.io/snippets/embed/?code=%23%20simple%20function%20to%20multiply%20integers%20from%201%20to%2010%20by%20parameter%20value%20(%22multiplier%22)%0Aget.multiples1to10%20%3C-%20function()%7B%0A%20%20%20numbers%20%3C-%201%3A10%0A%20%20%20return(multiplier*numbers)%0A%7D%0A%0A%23%20display%20results%20for%20parameter%20value%20set%20to%203%0Acurrent_value%20%3C-%203%0Aresults%20%3C-%20get.multiples1to10(multiplier%20%3D%20current_value)%0Aprint(results)%0A", // 15
+                      "https://rdrr.io/snippets/embed/?code=%23%20simple%20function%20to%20multiply%20integers%20from%201%20to%2010%20by%20parameter%20value%20(%22multiplier%22)%0Aget.multiples1to10%20%3C-%20function(multiplier%2C%20)%7B%0A%20%20%20numbers%20%3C-%201%3A10%0A%20%20%20return(multiplier*numbers)%0A%7D%0A%0A%23%20display%20results%20for%20parameter%20value%20set%20to%203%0Acurrent_value%20%3C-%203%0Aresults%20%3C-%20get.multiples1to10(multiplier%20%3D%20current_value)%0Aprint(results)", // 16
+                      "https://rdrr.io/snippets/embed/?code=%23%20simple%20function%20to%20multiply%20integers%20from%201%20to%2010%20by%20parameter%20value%20(%22multiplier%22)%0Aget.multiples1to10%20%3C-%20function(multiplier)%7B%0A%20%20%20numbers%20%3C-%201%3A10%0A%20%20%20return(multiplier*numbers)%0A%7D%0A%0A%23%20display%20results%20for%20parameter%20value%20set%20to%203%0Afunction%20%3C-%203%0Aresults%20%3C-%20get.multiples1to10(multiplier%20%3D%20function)%0Aprint(results)", // 17
+                      "https://rdrr.io/snippets/embed/?code=%23%20simple%20function%20to%20multiply%20integers%20from%201%20to%2010%20by%20parameter%20value%20(%22multiplier%22)%0Aget.multiples1to10%20%3C-%20function(multiplier)%7B%0A%20%20%20numbers%20%3C-%201%3A10%0A%20%20%20return(multiplier%2Bnumbers)%0A%7D%0A%0A%23%20display%20results%20for%20parameter%20value%20set%20to%203%0Acurrent_value%20%3C-%203%0Aresults%20%3C-%20get.multiples1to10(multiplier%20%3D%20current_value)%0Aprint(results)", // 24
+                      "https://rdrr.io/snippets/embed/?code=%23%20simple%20function%20to%20multiply%20integers%20from%201%20to%2010%20by%20parameter%20value%20(%22multiplier%22)%0Aget.multiples1to10%20%3C-%20function(multiplier)%7B%0A%20%20%20numbers%20%201%3A10%0A%20%20%20return(multiplier*numbers)%0A%7D%0A%0A%23%20display%20results%20for%20parameter%20value%20set%20to%203%0Acurrent_value%20%3C-%203%0Aresults%20%3C-%20get.multiples1to10(multiplier%20%3D%20current_value)%0Aprint(results)", // 18
+                      "https://rdrr.io/snippets/embed/?code=%23%20simple%20function%20to%20multiply%20integers%20from%201%20to%2010%20by%20parameter%20value%20(%22multiplier%22)%0Aget.multiples1to10%20%3C-%20function(multiplier)%7B%0A%20%20%20numbers%20%3C-%201%3A10%0A%20%20%20return(multiplier*numbers)%0A%7D%0A%0A%23%20display%20results%20for%20parameter%20value%20set%20to%203%0Acurrent_value%20%3C-%203%0Aresults%20%3C-%20get.multiples1to10(multiplier%20%3D%20current_value)%0Aprint%20results", // 19
+                      "https://rdrr.io/snippets/embed/?code=%23%20simple%20function%20to%20multiply%20integers%20from%201%20to%2010%20by%20parameter%20value%20(%22multiplier%22)%0Aget.multiples1to10%20%3C-%20function(multiplier)%7B%0A%20%20%20numbers%20%3C-%201%3A10%0A%20%20%20return(multiplier-numbers)%0A%7D%0A%0A%23%20display%20results%20for%20parameter%20value%20set%20to%203%0Aresults%20%3C-%20get.multiples1to10(multiplier%20%3D%20current_value)%0Aprint(results)", // 20
+                      "https://rdrr.io/snippets/embed/?code=%23%20simple%20function%20to%20multiply%20integers%20from%201%20to%2010%20by%20parameter%20value%20(%22multiplier%22)%0Aget.multiples1to10%20%3C-%20function(multiplier)%7B%0A%20%20%20numbers%20%3C-%201%3A10%0A%20%20%20return(multiplier-numbers)%0A%7D%0A%0A%23%20display%20results%20for%20parameter%20value%20set%20to%203%0Acurrent_value%20%3C-%203%0Aresults%20%3C-%20get.multiples1to10(multiplier%20%3D%20current_value)%0Aprint(results)"];
+    
+    // global variable indicating the index
+    var theIndex;
+    
+    // a function to randomly sample an index
+    function getRandomIndex() {
+      // sample a random number between 0 and 24
+      theIndex = (Math.floor(Math.random()*25));
+    }
+    
+    // a function to successively increment index values for button click
+    function incrementIndex() {
+      // cycle through the numbers from 0 to length of buggyList
+      theIndex = (theIndex + 1) % buggyList.length;
+    }
+    
+    // a function to assign the buggy ULR to the src of the iframe
+    function updateBuggyURL() {
+      document.getElementById("buggyCode").src = buggyList[theIndex];
+    }
+    
+    // a function to randomly sample a buggy code from the list of buggy codes
+    function getRandomBug() {
+      // sample a random number between 0 and 24
+      const randomIndex = (Math.floor(Math.random()*25));
+      // assign the randomly sampled URL directly to the src of the iframe
+      document.getElementById("buggyCode").src = buggyList[randomIndex];
+    }
+    
+    // Run when the window loads
+    window.onload = function () {
+        getRandomIndex();
+        updateBuggyURL();
+    };
+    
+    // click the button to sample a new bug
+    document.getElementById("sampleNewBug").addEventListener("click", function () {
+      const iframe = document.getElementById("buggyCode");
+      incrementIndex();
+      updateBuggyURL();
+    });
+
+  </script>
+<p><br />
 <br />
 <br />
 </p>
