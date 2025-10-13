@@ -486,6 +486,7 @@ online repositories for data (e.g., Dryad), code (e.g., GitHub), and papers (e.g
 
 # Intro to Git(Hub)
 
+<div style="margin-top: -47vh;"></div>
 
 ## Version control
 
@@ -497,6 +498,247 @@ Keeping track of changes to documents:
 
 Programs can do this automatically for us (e.g., Google docs).
 
-### GitHub
+### Git
+
+<div align="center">
+![](https://swcarpentry.github.io/git-novice/fig/play-changes.svg){width=90%}
+</div>
+
+Tracks changes to all files and subfolders contained in the **repository** (which is just the parent folder).
+
+For text files, lets you see line-by-line changes:\
+
+<p align="center">
+![](./figures/git_change_to_text_file.png){width=35%}
+</p>
+
+For non-text files, indicates that files were changed:\
+
+<p align="center">
+![](./figures/git_change_to_nontext_file.png){width=50%}
+</p>
+
+Can be used locally on your computer\
+**AND**
+Can be synchronized with a server so that data & its changes are backed up to the cloud.
+
+## Using Git Locally
+
+Git can be run via command line but we will use GitHub Desktop.
+
+<div style="background-color: var(--action-color); padding: 20px;">
+
+#### Exercise 1.
+
+* Download and **install GitHub Desktop** at this link: [https://github.com/apps/desktop](https://github.com/apps/desktop)
+
+  - To complete the installation, you will also have to create an account on [GitHub.com](https://github.com/).
+  
+  - After you make your GitHub account, authenticate GitHub Desktop by going to\
+  **File ➜ Options... ➜ Accounts    ➜     Sign Into GitHub.com**
+
+<p align="center">
+![](./figures/git_setup_GitHub_Desktop.png){width=50%}
+</p>
+
+* Download this GitHub repository to your local computer: [EvoNerd/THEE_2025reproducibility](https://github.com/EvoNerd/THEE_2025reproducibility)\
+**Add ➜ Clone repository...     ➜    URL**
+
+<p align="center">
+![](./figures/git_clone_repo.png){width=50%}
+<br><br>
+![](./figures/placeholder.png){width=50%}
+</p>
+
+* Open the "THEE_2025reproducibility" folder locally on your computer (i.e., using File Explorer for Windows, or Finder for Mac).
+
+  - GitHub Desktop will probably save the repository to a folder in your Documents that is called "GitHub".
+  
+  - You can also navigate to the repository from the start page on GitHub Desktop
+  
+<p align="center">
+![](./figures/placeholder.png){width=50%}
+</p>
+  
+* Copy the R Notebook file you created before the break to the new repository.
+
+  - **Do you see any changes on GitHub Desktop?**
+  
+<p align="center">
+![](./figures/placeholder.png){width=50%}
+</p>
+
+</div>
+
+GitHub Desktop automatically detects all changes in a repository and adds them to the **staging area**.
+
+When you decide that you have completed a **stash** of work, then you **commit** the stash to the repository with a message.
+
+<div align="center">
+![](https://swcarpentry.github.io/git-novice/fig/git-staging-area.svg){width=90%}
+</div>
+
+The Git repository contains a time-series of commits.
+
+<div style="background-color: var(--action-color); padding: 20px;">
+
+#### Exercise 2.
+
+* Navigate to the GitHub Desktop staging area and commit the R Notebook file you copy/pasted to the repository.
+
+  - GitHub Desktop may prompt you to push to origin -- do **NOT** do that yet!
+
+<p align="center">
+![](./figures/placeholder.png){width=50%}
+</p>
+  
+* Rename the R Notebook file with your firstname and commit this change too.
+
+<p align="center">
+![](./figures/placeholder.png){width=50%}
+</p>
+
+* Navigate to the history tab. Can you figure out how to tag the most recent commit?
+
+<p align="center">
+![](./figures/placeholder.png){width=50%}
+</p>
+
+</div>
+
+Some commits are especially important (*e.g.*, the last time your code worked properly, the version of your results that you presented for the final presentation, *etc.*)
+
+**Tags** let you label these important commits.
+
+It's easier to find and return to a tagged commit.
+
+<div style="background-color: var(--action-color); padding: 20px;">
+
+#### Exercise 3.
+
+* Tag your most recent commit as `<your firstname's> code`.
+
+<p align="center">
+![](./figures/placeholder.png){width=50%}
+</p>
+
+* Open your R Notebook file, delete all of its contents, and save the file. *Don't worry! Git will be able to retrieve it for you!*
+
+* Commit the change.
+
+<p align="center">
+![](./figures/placeholder.png){width=50%}
+</p>
+
+* Navigate to the history tab. Can you figure out how to revert the changes made by the most recent commit?
+
+  - **What happens when you revert changes in commit?**
+
+<p align="center">
+![](./figures/placeholder.png){width=50%}
+</p>
+
+</div>
 
 
+
+
+## Using Git with a Server
+
+Google Docs lets us work collaboratively on the same document.
+
+GitHub pairs the functionality of Git with a server, so we can work collaboratively on the files in a repository.
+
+By considering each change (**commit**) to a repository as separate, Git can keep track of different versions of the same repository.
+
+<p align="center">
+![](https://swcarpentry.github.io/git-novice/fig/versions.svg){width=50%}
+</p>
+
+Then, the different versions can be **merged** back together.
+
+<p align="center">
+![](https://swcarpentry.github.io/git-novice/fig/merge.svg){width=50%}
+</p>
+
+Uploading your local commits and merging them *to the server* is called **pushing**.
+
+Downloading the most recent commits *from the server* and merging them locally is called **pulling**.
+
+You can also just **fetch**: ask Git to check if there are any new commits on the server. This will neither upload or download any changes from/to your local computer.
+
+<div style="background-color: var(--action-color); padding: 20px;">
+
+#### Exercise 4.
+
+* **Push** your local changes to GitHub's server by clicking "Push to Origin".
+
+<p align="center">
+![](./figures/placeholder.png){width=50%}
+</p>
+
+* If you try to push but GitHub finds that your local computer does not have the latest commits, it will automatically ask you to **pull** so your local computer is up-to-date.
+
+<p align="center">
+![](./figures/placeholder.png){width=50%}
+</p>
+
+* Keep trying to push until you have successfully synchronized your R Notebook file with origin.
+
+* Keep trying to fetch and pull until you have have downloaded all the R Notebook files of the whole class to your local computer.
+
+</div>
+
+For text documents, Git keeps track of changes based on the name and line number of a document.
+
+If different commits modify the same line of the same document, Git does not know how to merge. This creates a **conflict**.
+
+<p align="center">
+![](https://swcarpentry.github.io/git-novice/fig/conflict.svg){width=90%}
+</p>
+
+When it finds a conflict, GitHub will ask you to resolve it manually.
+
+Committing your changes often and synchronizing them with the server reduces the likelihood of creating conflicts.
+
+<div style="background-color: var(--action-color); padding: 20px;">
+
+#### *Bonus Exercise*
+
+* Make a change to the R Notebook file called `reproducibility.Rmd`. Commit the change and push it to GitHub.
+
+  - Did this create a conflict or was Git able to merge it successfully?
+  
+* Keep making changes, committing, and pushing them until we create a conflict. Let's practice together to merge the conflicts.
+
+</div>
+
+# Summary
+
+* Automated version control is useful.
+
+  - you will have to use GitHub during the research practical
+  
+  - other options exist. Servers: *GitLab*. Programs: *mercurial, CVS, Subversion*.
+
+* Git can be used locally for version control.
+
+* Git can be used with an online server (e.g., GitHub)
+
+  - we experimented with how GitHub helps backups & collaboration
+  
+  - GitHub can also be used to host & distribute projects\
+  *e.g., [this website is hosted on GitHub](https://github.com/EvoNerd/THEE_2025reproducibility)*
+
+* Coupling Git with an online server makes reproducibility easy:
+
+
+<div align="center">
+  Hoard
+  <img src="https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_t3BbtzxyAYqbfzPrSXHDX3IeUrRhU1jPOjjOAkW9k0k8IoG8cmFmbm09_SFb0YM7BZrY6Ji_JDYu9zrZQh1PYXO43WmHGH8S04Ib6NHl5UvVru5mKRtas-k50qmohmAw=s0-d" style="width: 20%; margin-left: 5vw;" />
+</div>
+
+<div align="center">
+  <img src="https://assets.myket.ir/icons/large/com.appattitude.shareapp_f6f6c04e-10fb-4303-a952-0e783d3bfb38.png" style="width: 20%; margin-right: 5vw;" />
+  Share
+</div>
