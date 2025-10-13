@@ -179,7 +179,7 @@ decisions are <u>not</u> explicit and can be inconsistent
 
 ### Habits:
 
-use a scripting language for your analyses, find+replace, automatically save parameters in the filename.
+use find+replace, automatically save parameters in the filename, use a scripting language for your analyses.
 
 ### Tools:
 
@@ -539,15 +539,19 @@ Git can be run via command line but we will use GitHub Desktop.
 
 <p align="center">
 ![](./figures/git_setup_GitHub_Desktop.png){width=50%}
+<br><br>
+![](./figures/github_signin.png){width=30%}
+<br><br>
+![](./figures/github_signin2.png){width=25%}
 </p>
 
 * Download this GitHub repository to your local computer: [EvoNerd/THEE_2025reproducibility](https://github.com/EvoNerd/THEE_2025reproducibility)\
 **Add ➜ Clone repository...     ➜    URL**
 
 <p align="center">
-![](./figures/git_clone_repo.png){width=50%}
+![](./figures/git_clone_repo.png){width=35%}
 <br><br>
-![](./figures/placeholder.png){width=50%}
+![](./figures/git_clone_repo_URL.png){width=60%}
 </p>
 
 * Open the "THEE_2025reproducibility" folder locally on your computer (i.e., using File Explorer for Windows, or Finder for Mac).
@@ -557,7 +561,7 @@ Git can be run via command line but we will use GitHub Desktop.
   - You can also navigate to the repository from the start page on GitHub Desktop
   
 <p align="center">
-![](./figures/placeholder.png){width=50%}
+![](./figures/git_navigate_to_directory.png){width=45%}
 </p>
   
 * Copy the R Notebook file you created before the break to the new repository.
@@ -565,7 +569,7 @@ Git can be run via command line but we will use GitHub Desktop.
   - **Do you see any changes on GitHub Desktop?**
   
 <p align="center">
-![](./figures/placeholder.png){width=50%}
+![](./figures/git_stash.png){width=40%}
 </p>
 
 </div>
@@ -578,7 +582,9 @@ When you decide that you have completed a **stash** of work, then you **commit**
 ![](https://swcarpentry.github.io/git-novice/fig/git-staging-area.svg){width=90%}
 </div>
 
-The Git repository contains a time-series of commits.
+The Git repository contains a time-series of commits. This time-series is called a **branch**.
+
+A repository can have more than one branch, but this makes it more difficult to manage. By convention the main branch of a repository is called `main`.
 
 <div style="background-color: var(--action-color); padding: 20px;">
 
@@ -586,22 +592,22 @@ The Git repository contains a time-series of commits.
 
 * Navigate to the GitHub Desktop staging area and commit the R Notebook file you copy/pasted to the repository.
 
-  - GitHub Desktop may prompt you to push to origin -- do **NOT** do that yet!
+  - GitHub Desktop may prompt you to push to origin or to create a fork -- do **NOT** do either of those things at this time!
 
 <p align="center">
-![](./figures/placeholder.png){width=50%}
+![](./figures/git_commit.png){width=30%}
 </p>
   
 * Rename the R Notebook file with your firstname and commit this change too.
 
 <p align="center">
-![](./figures/placeholder.png){width=50%}
+![](./figures/git_change_doc_name.png){width=30%}
 </p>
 
 * Navigate to the history tab. Can you figure out how to tag the most recent commit?
 
 <p align="center">
-![](./figures/placeholder.png){width=50%}
+![](./figures/git_create_tag.png){width=40%}
 </p>
 
 </div>
@@ -619,7 +625,7 @@ It's easier to find and return to a tagged commit.
 * Tag your most recent commit as `<your firstname's> code`.
 
 <p align="center">
-![](./figures/placeholder.png){width=50%}
+![](./figures/git_tag.png){width=30%}
 </p>
 
 * Open your R Notebook file, delete all of its contents, and save the file. *Don't worry! Git will be able to retrieve it for you!*
@@ -627,7 +633,7 @@ It's easier to find and return to a tagged commit.
 * Commit the change.
 
 <p align="center">
-![](./figures/placeholder.png){width=50%}
+![](./figures/git_delete_file_contents.png){width=50%}
 </p>
 
 * Navigate to the history tab. Can you figure out how to revert the changes made by the most recent commit?
@@ -635,7 +641,9 @@ It's easier to find and return to a tagged commit.
   - **What happens when you revert changes in commit?**
 
 <p align="center">
-![](./figures/placeholder.png){width=50%}
+![](./figures/git_revert_changes.png){width=60%}
+<br><br>
+![](./figures/git_reverted_change.png){width=30%}
 </p>
 
 </div>
@@ -671,21 +679,38 @@ You can also just **fetch**: ask Git to check if there are any new commits on th
 
 #### Exercise 4.
 
+* Send Hermina your GitHub username or email. You should soon receive an email invite to collaborate on the repository.
+
+<p align="center">
+![](./figures/github_invite_to_collab.png){width=60%}
+<br><br>
+![](./figures/github_invite_to_collab2.png){width=30%}
+</p>
+
+
 * **Push** your local changes to GitHub's server by clicking "Push to Origin".
 
 <p align="center">
-![](./figures/placeholder.png){width=50%}
+![](./figures/github_push.png){width=80%}
 </p>
 
 * If you try to push but GitHub finds that your local computer does not have the latest commits, it will automatically ask you to **pull** so your local computer is up-to-date.
 
 <p align="center">
-![](./figures/placeholder.png){width=50%}
+![](./figures/github_fetch.png){width=60%}
+<br><br>
+![](./figures/github_pull.png){width=80%}
 </p>
 
 * Keep trying to push until you have successfully synchronized your R Notebook file with origin.
 
 * Keep trying to fetch and pull until you have have downloaded all the R Notebook files of the whole class to your local computer.
+
+* Check out how many tags we have now on the repository! You can easily find tagged commits via the GitHub website.
+
+<p align="center">
+![](./figures/github_tags.png){width=50%}
+</p>
 
 </div>
 
@@ -697,7 +722,7 @@ If different commits modify the same line of the same document, Git does not kno
 ![](https://swcarpentry.github.io/git-novice/fig/conflict.svg){width=90%}
 </p>
 
-When it finds a conflict, GitHub will ask you to resolve it manually.
+Git(Hub) will try its best to automatically resolve conflicts for you. When it finds a conflict that it cannot figure out how you it should be resolved, it will ask you to resolve it manually.
 
 Committing your changes often and synchronizing them with the server reduces the likelihood of creating conflicts.
 
@@ -709,7 +734,33 @@ Committing your changes often and synchronizing them with the server reduces the
 
   - Did this create a conflict or was Git able to merge it successfully?
   
+<p align="center">
+![](./figures/github_conflict.png){width=80%}
+</p>
+
+  
 * Keep making changes, committing, and pushing them until we create a conflict. Let's practice together to merge the conflicts.
+
+* Conflicts can be resolved by telling Git to use all the changes from one commit and drop all the changes from the other commit\
+*e.g., we can keep **either** the commit from local main **or** that from GitHub (origin/main)*
+
+<p align="center">
+![](./figures/github_resolve_conflict_auto.png){width=80%}
+</p>
+
+* If we want to keep some parts from **both** of the conflicting commits, we need to open the document in a code or text editor and manually resolve the conflict. Here's what a conflict looks like in Visual Studio Code. It is resolved manually simply by clicking on the change you want to accept.
+
+<p align="center">
+![](./figures/github_resolve_conflict_manual.png){width=100%}
+</p>
+
+* Conflicts are scary but we can easily manage them once we learn how 😌
+
+  - **How can you avoid conflicts?**
+
+<p align="center">
+![](./figures/github_resolved_conflict.png){width=60%}
+</p>
 
 </div>
 
@@ -717,9 +768,9 @@ Committing your changes often and synchronizing them with the server reduces the
 
 * Automated version control is useful.
 
-  - you will have to use GitHub during the research practical
+  - You will have to use GitHub during the research practical
   
-  - other options exist. Servers: *GitLab*. Programs: *mercurial, CVS, Subversion*.
+  - (other options exist. Servers: *GitLab*. Programs: *mercurial, CVS, Subversion*.)
 
 * Git can be used locally for version control.
 
@@ -728,7 +779,7 @@ Committing your changes often and synchronizing them with the server reduces the
   - we experimented with how GitHub helps backups & collaboration
   
   - GitHub can also be used to host & distribute projects\
-  *e.g., [this website is hosted on GitHub](https://github.com/EvoNerd/THEE_2025reproducibility)*
+  *e.g., [this website is hosted on GitHub](https://github.com/EvoNerd/THEE_2025reproducibility) on the branch called "website"*
 
 * Coupling Git with an online server makes reproducibility easy:
 
@@ -741,4 +792,16 @@ Committing your changes often and synchronizing them with the server reduces the
 <div align="center">
   <img src="https://assets.myket.ir/icons/large/com.appattitude.shareapp_f6f6c04e-10fb-4303-a952-0e783d3bfb38.png" style="width: 20%; margin-right: 5vw;" />
   Share
+</div>
+
+* How does GitHub help us with the other reproducibility principles?
+
+<div align="center">
+  Annotate
+  <img src="https://libapps-au.s3-ap-southeast-2.amazonaws.com/accounts/1771/images/annotate.png" style="width: 20%; margin-left: 5vw;" />
+</div>
+
+<div align="center">
+  <img src="https://images.lumacdn.com/cdn-cgi/image/format=auto,fit=cover,dpr=2,background=white,quality=75,width=400,height=400/event-covers/yo/f21e0c96-387b-4142-be2b-cb5da5fbc84f.png" style="width: 20%; margin-right: 5vw;" />
+  Automate
 </div>

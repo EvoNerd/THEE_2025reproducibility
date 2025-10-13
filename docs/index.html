@@ -647,8 +647,8 @@ decisions are <u>not</u> explicit and can be inconsistent</p>
 </div>
 <div id="habits-1" class="section level3">
 <h3>Habits:</h3>
-<p>use a scripting language for your analyses, find+replace,
-automatically save parameters in the filename.</p>
+<p>use find+replace, automatically save parameters in the filename, use
+a scripting language for your analyses.</p>
 </div>
 <div id="tools-1" class="section level3">
 <h3>Tools:</h3>
@@ -988,6 +988,8 @@ GitHub.com</strong></p></li>
 </ul>
 <p align="center">
 <img src="figures/git_setup_GitHub_Desktop.png" style="width:50.0%" />
+<br><br> <img src="figures/github_signin.png" style="width:30.0%" />
+<br><br> <img src="figures/github_signin2.png" style="width:25.0%" />
 </p>
 <ul>
 <li>Download this GitHub repository to your local computer: <a
@@ -995,8 +997,8 @@ href="https://github.com/EvoNerd/THEE_2025reproducibility">EvoNerd/THEE_2025repr
 <strong>Add ➜ Clone repository… ➜ URL</strong></li>
 </ul>
 <p align="center">
-<img src="figures/git_clone_repo.png" style="width:50.0%" /> <br><br>
-<img src="figures/placeholder.png" style="width:50.0%" />
+<img src="figures/git_clone_repo.png" style="width:35.0%" /> <br><br>
+<img src="figures/git_clone_repo_URL.png" style="width:60.0%" />
 </p>
 <ul>
 <li><p>Open the “THEE_2025reproducibility” folder locally on your
@@ -1009,7 +1011,8 @@ GitHub Desktop</p></li>
 </ul></li>
 </ul>
 <p align="center">
-<img src="figures/placeholder.png" style="width:50.0%" />
+<img src="figures/git_navigate_to_directory.png"
+style="width:45.0%" />
 </p>
 <ul>
 <li><p>Copy the R Notebook file you created before the break to the new
@@ -1019,7 +1022,7 @@ repository.</p>
 </ul></li>
 </ul>
 <p align="center">
-<img src="figures/placeholder.png" style="width:50.0%" />
+<img src="figures/git_stash.png" style="width:40.0%" />
 </p>
 </div>
 <p>GitHub Desktop automatically detects all changes in a repository and
@@ -1032,7 +1035,11 @@ a message.</p>
 src="https://swcarpentry.github.io/git-novice/fig/git-staging-area.svg"
 style="width:90.0%" /></p>
 </div>
-<p>The Git repository contains a time-series of commits.</p>
+<p>The Git repository contains a time-series of commits. This
+time-series is called a <strong>branch</strong>.</p>
+<p>A repository can have more than one branch, but this makes it more
+difficult to manage. By convention the main branch of a repository is
+called <code>main</code>.</p>
 <div id="exercise-2.-1" class="section level4"
 style="background-color: var(--action-color); padding: 20px;">
 <h4>Exercise 2.</h4>
@@ -1040,26 +1047,26 @@ style="background-color: var(--action-color); padding: 20px;">
 <li><p>Navigate to the GitHub Desktop staging area and commit the R
 Notebook file you copy/pasted to the repository.</p>
 <ul>
-<li>GitHub Desktop may prompt you to push to origin – do
-<strong>NOT</strong> do that yet!</li>
+<li>GitHub Desktop may prompt you to push to origin or to create a fork
+– do <strong>NOT</strong> do either of those things at this time!</li>
 </ul></li>
 </ul>
 <p align="center">
-<img src="figures/placeholder.png" style="width:50.0%" />
+<img src="figures/git_commit.png" style="width:30.0%" />
 </p>
 <ul>
 <li>Rename the R Notebook file with your firstname and commit this
 change too.</li>
 </ul>
 <p align="center">
-<img src="figures/placeholder.png" style="width:50.0%" />
+<img src="figures/git_change_doc_name.png" style="width:30.0%" />
 </p>
 <ul>
 <li>Navigate to the history tab. Can you figure out how to tag the most
 recent commit?</li>
 </ul>
 <p align="center">
-<img src="figures/placeholder.png" style="width:50.0%" />
+<img src="figures/git_create_tag.png" style="width:40.0%" />
 </p>
 </div>
 <p>Some commits are especially important (<em>e.g.</em>, the last time
@@ -1075,7 +1082,7 @@ style="background-color: var(--action-color); padding: 20px;">
 <code>&lt;your firstname's&gt; code</code>.</li>
 </ul>
 <p align="center">
-<img src="figures/placeholder.png" style="width:50.0%" />
+<img src="figures/git_tag.png" style="width:30.0%" />
 </p>
 <ul>
 <li><p>Open your R Notebook file, delete all of its contents, and save
@@ -1084,7 +1091,7 @@ you!</em></p></li>
 <li><p>Commit the change.</p></li>
 </ul>
 <p align="center">
-<img src="figures/placeholder.png" style="width:50.0%" />
+<img src="figures/git_delete_file_contents.png" style="width:50.0%" />
 </p>
 <ul>
 <li><p>Navigate to the history tab. Can you figure out how to revert the
@@ -1095,7 +1102,9 @@ commit?</strong></li>
 </ul></li>
 </ul>
 <p align="center">
-<img src="figures/placeholder.png" style="width:50.0%" />
+<img src="figures/git_revert_changes.png" style="width:60.0%" />
+<br><br> <img src="figures/git_reverted_change.png"
+style="width:30.0%" />
 </p>
 </div>
 </div>
@@ -1128,11 +1137,20 @@ any changes from/to your local computer.</p>
 style="background-color: var(--action-color); padding: 20px;">
 <h4>Exercise 4.</h4>
 <ul>
+<li>Send Hermina your GitHub username or email. You should soon receive
+an email invite to collaborate on the repository.</li>
+</ul>
+<p align="center">
+<img src="figures/github_invite_to_collab.png" style="width:60.0%" />
+<br><br> <img src="figures/github_invite_to_collab2.png"
+style="width:30.0%" />
+</p>
+<ul>
 <li><strong>Push</strong> your local changes to GitHub’s server by
 clicking “Push to Origin”.</li>
 </ul>
 <p align="center">
-<img src="figures/placeholder.png" style="width:50.0%" />
+<img src="figures/github_push.png" style="width:80.0%" />
 </p>
 <ul>
 <li>If you try to push but GitHub finds that your local computer does
@@ -1140,14 +1158,20 @@ not have the latest commits, it will automatically ask you to
 <strong>pull</strong> so your local computer is up-to-date.</li>
 </ul>
 <p align="center">
-<img src="figures/placeholder.png" style="width:50.0%" />
+<img src="figures/github_fetch.png" style="width:60.0%" /> <br><br>
+<img src="figures/github_pull.png" style="width:80.0%" />
 </p>
 <ul>
 <li><p>Keep trying to push until you have successfully synchronized your
 R Notebook file with origin.</p></li>
 <li><p>Keep trying to fetch and pull until you have have downloaded all
 the R Notebook files of the whole class to your local computer.</p></li>
+<li><p>Check out how many tags we have now on the repository! You can
+easily find tagged commits via the GitHub website.</p></li>
 </ul>
+<p align="center">
+<img src="figures/github_tags.png" style="width:50.0%" />
+</p>
 </div>
 <p>For text documents, Git keeps track of changes based on the name and
 line number of a document.</p>
@@ -1158,8 +1182,9 @@ does not know how to merge. This creates a
 <img src="https://swcarpentry.github.io/git-novice/fig/conflict.svg"
 style="width:90.0%" />
 </p>
-<p>When it finds a conflict, GitHub will ask you to resolve it
-manually.</p>
+<p>Git(Hub) will try its best to automatically resolve conflicts for
+you. When it finds a conflict that it cannot figure out how you it
+should be resolved, it will ask you to resolve it manually.</p>
 <p>Committing your changes often and synchronizing them with the server
 reduces the likelihood of creating conflicts.</p>
 <div id="bonus-exercise-1" class="section level4"
@@ -1173,9 +1198,43 @@ GitHub.</p>
 <li>Did this create a conflict or was Git able to merge it
 successfully?</li>
 </ul></li>
+</ul>
+<p align="center">
+<img src="figures/github_conflict.png" style="width:80.0%" />
+</p>
+<ul>
 <li><p>Keep making changes, committing, and pushing them until we create
 a conflict. Let’s practice together to merge the conflicts.</p></li>
+<li><p>Conflicts can be resolved by telling Git to use all the changes
+from one commit and drop all the changes from the other commit<br />
+<em>e.g., we can keep <strong>either</strong> the commit from local main
+<strong>or</strong> that from GitHub (origin/main)</em></p></li>
 </ul>
+<p align="center">
+<img src="figures/github_resolve_conflict_auto.png"
+style="width:80.0%" />
+</p>
+<ul>
+<li>If we want to keep some parts from <strong>both</strong> of the
+conflicting commits, we need to open the document in a code or text
+editor and manually resolve the conflict. Here’s what a conflict looks
+like in Visual Studio Code. It is resolved manually simply by clicking
+on the change you want to accept.</li>
+</ul>
+<p align="center">
+<img src="figures/github_resolve_conflict_manual.png"
+style="width:100.0%" />
+</p>
+<ul>
+<li><p>Conflicts are scary but we can easily manage them once we learn
+how 😌</p>
+<ul>
+<li><strong>How can you avoid conflicts?</strong></li>
+</ul></li>
+</ul>
+<p align="center">
+<img src="figures/github_resolved_conflict.png" style="width:60.0%" />
+</p>
 </div>
 </div>
 </div>
@@ -1197,7 +1256,7 @@ collaboration</p></li>
 <li><p>GitHub can also be used to host &amp; distribute projects<br />
 <em>e.g., <a
 href="https://github.com/EvoNerd/THEE_2025reproducibility">this website
-is hosted on GitHub</a></em></p></li>
+is hosted on GitHub</a> on the branch called “website”</em></p></li>
 </ul></li>
 <li><p>Coupling Git with an online server makes reproducibility
 easy:</p></li>
@@ -1209,6 +1268,18 @@ easy:</p></li>
 <div align="center">
 <p><img src="https://assets.myket.ir/icons/large/com.appattitude.shareapp_f6f6c04e-10fb-4303-a952-0e783d3bfb38.png" style="width: 20%; margin-right: 5vw;" />
 Share</p>
+</div>
+<ul>
+<li>How does GitHub help us with the other reproducibility
+principles?</li>
+</ul>
+<div align="center">
+<p>Annotate
+<img src="https://libapps-au.s3-ap-southeast-2.amazonaws.com/accounts/1771/images/annotate.png" style="width: 20%; margin-left: 5vw;" /></p>
+</div>
+<div align="center">
+<p><img src="https://images.lumacdn.com/cdn-cgi/image/format=auto,fit=cover,dpr=2,background=white,quality=75,width=400,height=400/event-covers/yo/f21e0c96-387b-4142-be2b-cb5da5fbc84f.png" style="width: 20%; margin-right: 5vw;" />
+Automate</p>
 </div>
 </div>
 
