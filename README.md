@@ -22,12 +22,9 @@ You will need R and RStudio. Any newer version should work (I used R 4.3.3 and R
 If you want to "print" the R notebook file to a .pdf or .html file (this is called "knitting" the notebook file), you will need to install the knitr package (version 1.49 or better). You can use the command: `install.packages("knitr")`
 
 # File structure
-In this repository there is 1 subfolder called "code". It contains all the R code for the in-class exercises.
+In the main folder you can find the code for the exercises and their solutions in the file "reproducibility.Rmd" (with a knitted .html version as well). The file reproducibility.Rmd produces .csv files whose names will be in the format "numbers_1_to_10--multiplier \d .csv", 3 example csv files are shown.
 
-In the main folder you can find the 2 .pdf files ("THEE_ResearchPractical--Reproducibility_2024-10-15.pdf" and "THEE_ResearchPractical--GitTutorial_2024-10-15.pdf") with the lecture slides and exercise instructions.
-
-In the subfoder, you can find the code for the exercises and their solutions in the file "reproducibility.Rmd" (with a knitted .html version as well).
-When you run reproducibility.Rmd, it will produce .csv files whose names will be in the format "numbers_1_to_10--multiplier \d .csv".
+There is 1 subfolder called "archived--2024". It contains course material from 2024: 2 pdf's of lecture slides and a subfolder with the code.
 
 # Contact
 This repository and its contents were developed and are maintained by Dr. Ana-Hermina Ghenu for Prof. Claudia Bank, Institute of Ecology & Evolution, University of Bern.
