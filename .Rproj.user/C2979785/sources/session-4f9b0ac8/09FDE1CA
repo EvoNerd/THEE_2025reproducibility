@@ -3,7 +3,7 @@
     "path": "~/GitHub/THEE_2025reproducibility/reproducibility_half.Rmd",
     "project_path": "reproducibility_half.Rmd",
     "type": "r_markdown",
-    "hash": "3894041713",
+    "hash": "2287523088",
     "contents": "",
     "dirty": false,
     "created": 1760373223056.0,
@@ -12,16 +12,16 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "477,3",
-        "scrollLine": "467",
+        "cursorPosition": "345,21",
+        "scrollLine": "337",
         "docOutlineVisible": "1"
     },
     "folds": "",
-    "lastKnownWriteTime": 1760375777,
+    "lastKnownWriteTime": 1760380235,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1760375777744,
+    "last_content_update": 1760380235081,
     "read_only": false,
     "read_only_alternatives": []
 }

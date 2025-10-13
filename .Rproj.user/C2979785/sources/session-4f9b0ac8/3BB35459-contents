@@ -346,11 +346,11 @@ Committing your changes often and synchronizing them with the server reduces the
 
 <div align="center"><p style="font-size: 24px;">
   [Hoard](reproducibility_half.html#3_Hoard_)
-  <img src="https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_t3BbtzxyAYqbfzPrSXHDX3IeUrRhU1jPOjjOAkW9k0k8IoG8cmFmbm09_SFb0YM7BZrY6Ji_JDYu9zrZQh1PYXO43WmHGH8S04Ib6NHl5UvVru5mKRtas-k50qmohmAw=s0-d" style="width: 20%; margin-left: 5vw;" />
+  <img src="./figures/hoarder_icon.png" style="width: 20%; margin-left: 5vw;" />
 </p></div>
 
 <div align="center"><p style="font-size: 24px;">
-  <img src="https://assets.myket.ir/icons/large/com.appattitude.shareapp_f6f6c04e-10fb-4303-a952-0e783d3bfb38.png" style="width: 20%; margin-right: 5vw;" />
+  <img src="./figures/share_icon.png" style="width: 20%; margin-right: 5vw;" />
   [Share](reproducibility_half.html#4_Share_)
 </p></div>
 
@@ -364,6 +364,6 @@ Committing your changes often and synchronizing them with the server reduces the
 </p></div>
 
 <div align="center"><p style="font-size: 24px;">
-  <img src="https://images.lumacdn.com/cdn-cgi/image/format=auto,fit=cover,dpr=2,background=white,quality=75,width=400,height=400/event-covers/yo/f21e0c96-387b-4142-be2b-cb5da5fbc84f.png" style="width: 20%; margin-right: 5vw;" />
+  <img src="./figures/automate_all_the_things.avif" style="width: 20%; margin-right: 5vw;" />
   [Automate](reproducibility_half.html#2_Automate_)
 </p></div>

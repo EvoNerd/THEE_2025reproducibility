@@ -173,8 +173,7 @@ What other authorship attribution information may be useful?
 
 
 
-
-## 2. Automate <img src="https://images.lumacdn.com/cdn-cgi/image/format=auto,fit=cover,dpr=2,background=white,quality=75,width=400,height=400/event-covers/yo/f21e0c96-387b-4142-be2b-cb5da5fbc84f.png" class="toc-icon" style="float: right; width: 25%; margin-left: 10px;" />
+## 2. Automate <img src="./figures/automate_all_the_things.avif" class="toc-icon" style="float: right; width: 25%; margin-left: 10px;" />
 
 ### Avoid manual manipulation
 
@@ -343,7 +342,8 @@ print(results)
 </div>
 
 
-## 3. Hoard <img src="https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_t3BbtzxyAYqbfzPrSXHDX3IeUrRhU1jPOjjOAkW9k0k8IoG8cmFmbm09_SFb0YM7BZrY6Ji_JDYu9zrZQh1PYXO43WmHGH8S04Ib6NHl5UvVru5mKRtas-k50qmohmAw=s0-d" class="toc-icon" style="float: right; width: 25%; margin-left: 10px;" />
+
+## 3. Hoard <img src="./figures/hoarder_icon.png" class="toc-icon" style="float: right; width: 25%; margin-left: 10px;" />
 
 
 ### Keep *almost* everything
@@ -451,7 +451,9 @@ for(current_value in 2:4){
 
 </div>
 
-## 4. Share <img src="https://assets.myket.ir/icons/large/com.appattitude.shareapp_f6f6c04e-10fb-4303-a952-0e783d3bfb38.png" class="toc-icon" style="float: right; width: 25%; margin-left: 10px;" />
+
+
+## 4. Share <img src="./figures/share_icon.png" class="toc-icon" style="float: right; width: 25%; margin-left: 10px;" />
 
 ### Fundamentally, research is about sharing
 
