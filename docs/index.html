@@ -545,13 +545,13 @@ class="section level3">
 <li value="1">
 <strong>Annotate:</strong> explain what you’re doing and why.
 </li>
-<li value="3">
+<li value="2">
 <strong>Automate:</strong> make your decisions explicit by using code.
 </li>
 <li value="4">
 <strong>Share:</strong> provide access to your work.
 </li>
-<li value="2">
+<li value="3">
 <strong>Hoard:</strong> … you will still have to keep <em>almost</em>
 everything …
 </li>
@@ -647,14 +647,14 @@ decisions are <u>not</u> explicit and can be inconsistent</p>
 </div>
 <div id="habits-1" class="section level3">
 <h3>Habits:</h3>
-<p>find+replace, use a scripting language for your analyses,
+<p>use a scripting language for your analyses, find+replace,
 automatically save parameters in the filename.</p>
 </div>
 <div id="tools-1" class="section level3">
 <h3>Tools:</h3>
 <p>notebook documents (e.g., R Notebook)</p>
 <div id="exercise-2." class="section level4"
-style="background-color: var(--action-color); padding: 20px;">
+style="background-color: var(--action-color); padding: 20px; margin-bottom: 10vh;">
 <h4>Exercise 2.</h4>
 <p>The window below contains a function
 (<code>get.multiples1to10</code>) that multiplies the integers from 1 to
@@ -663,15 +663,13 @@ which is currently set to <code>3</code>. So it should print out ten
 multiples of 3, from 3 to 30.</p>
 <p><strong>Run the code to convince yourself that it’s working
 properly.</strong></p>
-</div>
-<div>
 <!-- This block embeds an interactive R console via RDrr  -->
-<p><br> <!-- Reload Button on top right --> <button id="reloadGoodCode"
-        style="float: right; margin-left: 10px; font-size: 20px; padding: 10px 25px; border-radius: 7px; border: none; background-color: var(--action-contrast); color: var(--action-color);">
+<p><!-- Reload Button on top right --> <button id="reloadGoodCode"
+        style="float: right; margin-left: 10px; margin-bottom: 10px; font-size: 20px; padding: 10px 25px; border-radius: 7px; border: none; background-color: var(--action-contrast); color: var(--action-color);">
 Please reload the original code! </button>
 <!-- iframe (this is the R console) --> <iframe id="goodCode"
           src="https://rdrr.io/snippets/embed/?code=%23%20simple%20function%20to%20multiply%20integers%20from%201%20to%2010%20by%20parameter%20value%20(%22multiplier%22)%0Aget.multiples1to10%20%3C-%20function(multiplier)%7B%0A%20%20%20numbers%20%3C-%201%3A10%0A%20%20%20return(multiplier%20*%20numbers)%0A%7D%0A%0A%23%20display%20results%20for%20parameter%20value%20set%20to%203%0Acurrent_value%20%3C-%203%0Aresults%20%3C-%20get.multiples1to10(multiplier%20%3D%20current_value)%0Aprint(results)"
-          width="100%" height="500" style="margin-top: 10px;" frameborder="0"></iframe></p>
+          width="90%" height="500" style="display: block; margin: 10px auto 0 auto; margin-top: 10px;" frameborder="0"></iframe></p>
 <!-- JavaScript -->
 <script>
     // this makes the reload button work
@@ -680,18 +678,15 @@ Please reload the original code! </button>
       iframe.src = iframe.src; // forces the iframe to reload
     });
   </script>
-<p><br></p>
 </div>
 <div id="exercise-3." class="section level4"
-style="background-color: var(--action-color); padding: 20px;">
+style="background-color: var(--action-color); padding: 20px; margin-bottom: 10vh;">
 <h4>Exercise 3.</h4>
 <p>The window below contains a buggy version of the same code.</p>
 <p><strong>Find the bug and fix it so the code runs
 properly.</strong></p>
-</div>
-<div>
 <!-- This block embeds an interactive R console via RDrr  -->
-<p><br> <!-- Reload Button on top right --> <button id="reloadBuggyCode"
+<p><!-- Reload Button on top right --> <button id="reloadBuggyCode"
         style="float: right; margin-left: 10px; font-size: 20px; padding: 10px 25px; border-radius: 7px; border: none; background-color: var(--action-contrast); color: var(--action-color);">
 Please reload the original code! </button></p>
 <p><!-- iframe placeholder (this is the R console) -->
@@ -806,9 +801,9 @@ unique).</p>
 </div>
 <div id="habits-2" class="section level3">
 <h3>Habits:</h3>
-<p>backup regularly (daily!), versions of software &amp; packages, store
-raw data &amp; intermediate steps in data processing, store code &amp;
-progress on code</p>
+<p>store raw data &amp; intermediate steps in data processing, store
+code &amp; progress on code, backup regularly (daily!), versions of
+software &amp; packages</p>
 </div>
 <div id="tools-2" class="section level3">
 <h3>Tools:</h3>
@@ -818,7 +813,7 @@ version control (e.g., git), online repositories (e.g., GitHub)</p>
 
 </div>
 <div id="exercise-5." class="section level4"
-style="background-color: var(--action-color); padding: 20px;">
+style="background-color: var(--action-color); padding: 20px; margin-bottom: 10vh;">
 <h4>Exercise 5.</h4>
 <p>It is usually a better idea to write your results to a file rather
 than just printing them to the console. (Why?)</p>
@@ -840,19 +835,16 @@ that contains the parameter value in its name.</p>
 <p>Do you think this is a better filename for your results? <strong>Why
 or why not?</strong></p>
 </div>
-<div style="margin-top: 10vh;">
-
-</div>
-<div id="optional-exercise" class="section level4"
+<div id="bonus-exercise" class="section level4"
 style="background-color: var(--action-color); padding: 40px;">
-<h4><em>Optional Exercise</em></h4>
+<h4><em>Bonus Exercise</em></h4>
 <p>To maximize your automation and hoarding, you can <strong>use a
 loop</strong> to automatically run multiple parameter values and write
 the results to separate files, each named with its corresponding
 parameter value.</p>
 <p>The code below will loop over three parameter values: 2, 3, and 4.
-Figure out how to write their results to three separate and
-appropriately named files.</p>
+Figure out how to write the <code>results</code> of each parameter value
+to a separate and appropriately named file.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="cf">for</span>(current_value <span class="cf">in</span> <span class="dv">2</span><span class="sc">:</span><span class="dv">4</span>){</span>
 <span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>  ...</span>
 <span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>}</span></code></pre></div>

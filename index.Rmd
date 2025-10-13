@@ -93,9 +93,9 @@ output:
 
 <ol> <!-- Force the numbering to be out of order -->
   <li value="1"> **Annotate:** explain what you're doing and why. </li>
-  <li value="3"> **Automate:** make your decisions explicit by using code. </li>
+  <li value="2"> **Automate:** make your decisions explicit by using code. </li>
   <li value="4"> **Share:** provide access to your work. </li>
-  <li value="2"> **Hoard:** ... you will still have to keep *almost* everything ...</li>
+  <li value="3"> **Hoard:** ... you will still have to keep *almost* everything ...</li>
 </ol>
 
 
@@ -179,36 +179,31 @@ decisions are <u>not</u> explicit and can be inconsistent
 
 ### Habits:
 
-find+replace, use a scripting language for your analyses, automatically save parameters in the filename.
+use a scripting language for your analyses, find+replace, automatically save parameters in the filename.
 
 ### Tools:
 
 notebook documents (e.g., R Notebook)
 
 
-<div style="background-color: var(--action-color); padding: 20px;">
+<div style="background-color: var(--action-color); padding: 20px; margin-bottom: 10vh;">
 
 #### Exercise 2.
 
 The window below contains a function (`get.multiples1to10`) that multiplies the integers from 1 to 10 (`1:10`) by a constant value (`multiplier`), which is currently set to `3`. So it should print out ten multiples of 3, from 3 to 30.
 
 **Run the code to convince yourself that it's working properly.**
-</div>
 
-
-
-<div>
 <!-- This block embeds an interactive R console via RDrr  -->
-  <br>
   <!-- Reload Button on top right -->
   <button id="reloadGoodCode"
-        style="float: right; margin-left: 10px; font-size: 20px; padding: 10px 25px; border-radius: 7px; border: none; background-color: var(--action-contrast); color: var(--action-color);">
+        style="float: right; margin-left: 10px; margin-bottom: 10px; font-size: 20px; padding: 10px 25px; border-radius: 7px; border: none; background-color: var(--action-contrast); color: var(--action-color);">
   Please reload the original code!
   </button>
   <!-- iframe (this is the R console) -->
   <iframe id="goodCode"
           src="https://rdrr.io/snippets/embed/?code=%23%20simple%20function%20to%20multiply%20integers%20from%201%20to%2010%20by%20parameter%20value%20(%22multiplier%22)%0Aget.multiples1to10%20%3C-%20function(multiplier)%7B%0A%20%20%20numbers%20%3C-%201%3A10%0A%20%20%20return(multiplier%20*%20numbers)%0A%7D%0A%0A%23%20display%20results%20for%20parameter%20value%20set%20to%203%0Acurrent_value%20%3C-%203%0Aresults%20%3C-%20get.multiples1to10(multiplier%20%3D%20current_value)%0Aprint(results)"
-          width="100%" height="500" style="margin-top: 10px;" frameborder="0"></iframe>
+          width="90%" height="500" style="display: block; margin: 10px auto 0 auto; margin-top: 10px;" frameborder="0"></iframe>
 
   <!-- JavaScript -->
   <script>
@@ -218,23 +213,19 @@ The window below contains a function (`get.multiples1to10`) that multiplies the 
       iframe.src = iframe.src; // forces the iframe to reload
     });
   </script>
-  <br>
 </div>
 
 
 
-<div style="background-color: var(--action-color); padding: 20px;">
+<div style="background-color: var(--action-color); padding: 20px; margin-bottom: 10vh;">
 
 #### Exercise 3.
 
 The window below contains a buggy version of the same code.
 
 **Find the bug and fix it so the code runs properly.**
-</div>
 
-<div>
 <!-- This block embeds an interactive R console via RDrr  -->
-  <br>
   <!-- Reload Button on top right -->
   <button id="reloadBuggyCode"
         style="float: right; margin-left: 10px; font-size: 20px; padding: 10px 25px; border-radius: 7px; border: none; background-color: var(--action-contrast); color: var(--action-color);">
@@ -355,7 +346,7 @@ print(results)
 
 ### Habits:
 
-backup regularly (daily!), versions of software & packages, store raw data & intermediate steps in data processing, store code & progress on code
+store raw data & intermediate steps in data processing, store code & progress on code, backup regularly (daily!), versions of software & packages
 
 ### Tools:
 
@@ -364,7 +355,7 @@ version control (e.g., git), online repositories (e.g., GitHub)
 
 <div style="margin-top: 10vh;"></div>
 
-<div style="background-color: var(--action-color); padding: 20px;">
+<div style="background-color: var(--action-color); padding: 20px; margin-bottom: 10vh;">
 #### Exercise 5.
 
 It is usually a better idea to write your results to a file rather than just printing them to the console. (Why?)
@@ -401,15 +392,14 @@ Do you think this is a better filename for your results? **Why or why not?**
 
 </div>
 
-<div style="margin-top: 10vh;"></div>
 
 <div style="background-color: var(--action-color); padding: 40px;">
 
-#### *Optional Exercise*
+#### *Bonus Exercise*
 
 To maximize your automation and hoarding, you can **use a loop** to automatically run multiple parameter values and write the results to separate files, each named with its corresponding parameter value.
 
-The code below will loop over three parameter values: 2, 3, and 4. Figure out how to write their results to three separate and appropriately named files.
+The code below will loop over three parameter values: 2, 3, and 4. Figure out how to write the `results` of each parameter value to a separate and appropriately named file.
 
 ```r
 for(current_value in 2:4){
