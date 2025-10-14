@@ -7,7 +7,7 @@ output:
     df_print: paged
 ---
 
-This notebook is meant to introduce you to simulations and calculations using R. In the following, we will simulate the  rescue model introduced in the lecture.
+This notebook is meant to introduce you to simulations and calculations using R. In the following, we will simulate the evolutionary rescue model introduced in the lecture.
 
 ## Your tasks
 
