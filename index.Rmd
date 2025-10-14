@@ -7,9 +7,9 @@ output:
 
 An interactive 3-hour module demonstrating reproducibility principles for best research practices.
 
-# This interactive module has two parts
+# This interactive module has two parts:
 
-<br>
+<div style="margin-top: 10vh;"></div>
 
 ### 1. What is Reproducibility? 
 
@@ -20,8 +20,7 @@ An interactive 3-hour module demonstrating reproducibility principles for best r
 
 #### [I want to learn about Reproducibility](reproducibility_half.html)
 
-<br>
-<br>
+<div style="margin-top: 10vh;"></div>
 
 ### 2. Git(Hub) streamlines reproducible research practices
 
