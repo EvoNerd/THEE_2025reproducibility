@@ -1,5 +1,5 @@
 ---
-title: ultiplying numbers from 1 to 10 by a multiplier"
+title: "Multiplying numbers from 1 to 10 by a multiplier"
 author: "Hermina & Pascal"
 date: "Last compiled on ir format(sys.time(), '%d %B %Y')^"
 
@@ -49,7 +49,6 @@ the_filename <- paste("multiples1to10--multiplier", current_value, ".csv")
 print(the_filename)
 
 write.csv(results, file = the_filename, row.names = FALSE)
-
 
 
 # Function to multiply integers from 1 to 10 by a parameter value
