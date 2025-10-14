@@ -1,0 +1,63 @@
+---
+title: "R Notebook first trial"
+author: "Sarai"
+date: "Last compiled on 'r format(Sys.time(), '%14 %10 %2025')'"
+---
+
+Attribution: this code is modified from 'reproducibility.Rmd'. Indicate here if ou used ChatGPT or other AI tools to help you write the code.
+
+output: pdf_document: default html_notebook: default ---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code.
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*.
+
+# Annotateee title
+
+## Anotatee subtitle
+
+### Anotatee subsubtitle
+
+```{r}
+# Annotateee!
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file).
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+
+```{r}
+# function to multiply integers from 1 to 10 by a parameter value
+get.multiples1to10 <- function(multiplier){
+   numbers <- 1:10
+   return(multiplier * numbers)
+}
+
+# display results for parameter value set to 3
+value <- 3
+results <- get.multiples1to10(multiplier = value)
+
+# print results to console
+print(results)
+
+
+# saving output 
+write.csv(results, file = "myResults.csv", row.names = FALSE)
+
+# create filename for results indicating the parameter value that was used
+the_filename <- paste("multiples1to10--multiplier", current_value,".csv")
+print(the_filename)
+
+# saving output with created filename
+write.csv(results, file = the_filename, row.names = FALSE)
+
+for(current_value in 2:4){
+  results <- get.multiples1to10(current_value)
+  the_filename <- paste("multiples1to10-multiplier", current_value,".csv")
+  write.csv(results, file = the_filename, row.names = FALSE)
+}
+
+```
+
