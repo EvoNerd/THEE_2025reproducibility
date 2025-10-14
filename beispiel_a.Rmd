@@ -1,5 +1,5 @@
 ---
-title: "Basic model of evolutionary rescue in discrete time"
+title: "67"
 author: "Claudia Bank"
 date: "2025-10-14"
 output:
