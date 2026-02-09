@@ -32,6 +32,13 @@ output:
 
 <div style="margin-top: -47vh;"></div>
 
+# Attribution
+
+This module is based on the ["Version control with Git" lesson](https://swcarpentry.github.io/git-novice/) developed by [The Carpentries](https://carpentries.org/) under CC BY-SA 4.0: modifications were made to explain how Git is used with GitHub Desktop.
+
+I strongly recommend walking yourself through [their lesson](https://swcarpentry.github.io/git-novice/) if you want to learn more about Git.
+
+
 # Learning Goals
 
 * What is Git & how can I track my changes locally?
@@ -39,8 +46,6 @@ output:
 * What is GitHub & how can I track my changes remotely?
 
 * How are Git & GitHub related to [the reproducibility practices we learned about in the first half](reproducibility_half.html)?
-
-
 
 
 # Version control
@@ -58,7 +63,7 @@ Programs can do this automatically for us (e.g., Google docs).
 ## What is Git?
 
 <div align="center">
-![](https://swcarpentry.github.io/git-novice/fig/play-changes.svg){width=90%}
+![](https://swcarpentry.github.io/git-novice/fig/play-changes.svg){width=90% title="Figure from https://swcarpentry.github.io/git-novice"}
 </div>
 
 
@@ -137,7 +142,7 @@ GitHub Desktop automatically detects all changes in a repository and adds them t
 > When you decide that you have completed a **stash** of work, then you **commit** the stash to the repository with a message.
 
 <div align="center">
-![](https://swcarpentry.github.io/git-novice/fig/git-staging-area.svg){width=90%}
+![](https://swcarpentry.github.io/git-novice/fig/git-staging-area.svg){width=90%  title="Figure from https://swcarpentry.github.io/git-novice"}
 </div>
 
 The Git repository contains a time-series of commits. This time-series is called a **branch**.
@@ -218,13 +223,13 @@ GitHub pairs the functionality of Git with a server, so we can work collaborativ
 By considering each change (**commit**) to a repository as separate, Git can keep track of different versions of the same repository.
 
 <p align="center">
-![](https://swcarpentry.github.io/git-novice/fig/versions.svg){width=50%}
+![](https://swcarpentry.github.io/git-novice/fig/versions.svg){width=50%  title="Figure from https://swcarpentry.github.io/git-novice"}
 </p>
 
 Then, the different versions can be **merged** back together.
 
 <p align="center">
-![](https://swcarpentry.github.io/git-novice/fig/merge.svg){width=50%}
+![](https://swcarpentry.github.io/git-novice/fig/merge.svg){width=50%  title="Figure from https://swcarpentry.github.io/git-novice"}
 </p>
 
 >*Uploading* your local commits and merging them *to the server* is called **pushing**.
@@ -277,7 +282,7 @@ For text documents, Git keeps track of changes based on the name and line number
 If different commits modify the same line of the same document, Git does not know how to merge. This creates a **conflict**.
 
 <p align="center">
-![](https://swcarpentry.github.io/git-novice/fig/conflict.svg){width=90%}
+![](https://swcarpentry.github.io/git-novice/fig/conflict.svg){width=90%  title="Figure from https://swcarpentry.github.io/git-novice"}
 </p>
 
 Git(Hub) will try its best to automatically resolve conflicts for you. When it finds a conflict that it cannot figure out how you it should be resolved, it will ask you to resolve it manually.
