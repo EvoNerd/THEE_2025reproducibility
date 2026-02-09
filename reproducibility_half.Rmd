@@ -57,6 +57,9 @@ output:
 <div align="center">
 <iframe src="./slide_decks/reproducibility-intro/theSlides.html"
         style="width: 80%; aspect-ratio: 4 / 3; border: 1px solid var(--action-contrast);"></iframe>
+
+(To progress the slideshow above: click inside the square then use the arrow keys, $\leftarrow$ and $\rightarrow$. For more options, press the "h" key.)
+
 </div>
 
 <div style="margin-top: 3em;"></div>
@@ -495,4 +498,7 @@ We will learn how to use Git and GitHub in [the second half of the module.](gith
 <div align="center">
 <iframe src="./slide_decks/reproducibility-concl/theSlides.html"
         style="width: 80%; aspect-ratio: 4 / 3; border: 1px solid var(--action-contrast);"></iframe>
+        
+(To progress the slideshow above: click inside the square then use the arrow keys, $\leftarrow$ and $\rightarrow$. For more options, press the "h" key.)
+        
 </div>
