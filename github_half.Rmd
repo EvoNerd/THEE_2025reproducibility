@@ -50,40 +50,56 @@ I strongly recommend walking yourself through [their lesson](https://swcarpentry
 
 # Version control
 
-Keeping track of changes to documents:
+Keeping track of the changes made to a document can go like:
 
 <div align="center">
 ![](https://swcarpentry.github.io/git-novice/fig/phd101212s.png){width=35%}
 </div>
 
-Programs can do this automatically for us (e.g., Google docs).
+<div style="margin-top: 10vh;"></div>
+
+Programs can automatically track the changes made to a document (e.g., Google docs):
+
+<div align="center">
+![](./figures/git_changes_versions.svg){width=90% title="Figure modified from https://swcarpentry.github.io/git-novice"}
+</div>
 
 <div style="margin-top: 10vh;"></div>
 
 ## What is Git?
 
 <div align="center">
-![](https://swcarpentry.github.io/git-novice/fig/play-changes.svg){width=90% title="Figure from https://swcarpentry.github.io/git-novice"}
+![](./figures/git_repository.svg){width=90% title="Figure modified from https://swcarpentry.github.io/git-novice"}
 </div>
 
 
-<p style="font-size: 18px;">Git tracks changes to all files and subfolders contained in the **repository** (which is just the parent folder).</p>
+<p style="font-size: 18px;">*Git tracks the changes made to all files and subfolders* contained in a specific parent folder, called the **repository**.</p>
 
-For text files, Git lets you see line-by-line changes:\
+<div style="margin-top: 10vh;"></div>
+
+For *text files*, Git lets you see line-by-line changes:\
 
 <p align="center">
 ![](./figures/git_change_to_text_file.png){width=35%}
 </p>
 
-For non-text files, Git indicates that files were changed:\
+For *non-text files*, Git indicates that files were changed:\
 
 <p align="center">
 ![](./figures/git_change_to_nontext_file.png){width=50%}
 </p>
 
+<div style="margin-top: 10vh;"></div>
+
 > Git can be used locally on your computer\
 > &nbsp;&nbsp;&nbsp; **AND**\
 > Git can be synchronized with a server so that data & changes are backed up to the cloud.
+
+<div align="center">
+![](./figures/git_on_the_cloud.svg){width=90% title="Figure modified from https://swcarpentry.github.io/git-novice"}
+</div>
+
+<div style="margin-top: 10vh;"></div>
 
 # Using Git Locally
 
@@ -95,7 +111,7 @@ Git can be run via command line ([see tutorial here](https://swcarpentry.github.
 
 * Download and **install GitHub Desktop** at this link: [https://github.com/apps/desktop](https://github.com/apps/desktop)
 
-  - To complete the installation, you will also have to create an account on [GitHub.com](https://github.com/).
+  - To complete the installation, you will also have to create an account on [GitHub.com](https://github.com/). Your username will be public.
   
   - After you make your GitHub account, authenticate GitHub Desktop by going to\
   **File ➜ Options... ➜ Accounts    ➜     Sign Into GitHub.com**
