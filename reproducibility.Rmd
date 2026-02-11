@@ -1,6 +1,6 @@
 ---
 title: "Multiplying numbers from 1 to 10 by a multiplier"
-author: "Hermina & < write your name here :) >"
+author: "Remo :)"
 date: "Last compiled on `r format(Sys.time(), '%d %B %Y')`"
 output:
   html_document:
