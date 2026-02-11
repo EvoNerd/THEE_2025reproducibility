@@ -1,5 +1,6 @@
 ##Exercise
-
+## 1.1 
+dev.off()
 foodweb = matrix(
   c(
     # Oak, Grass, Caterpillar, Deer, Bird, Fox
