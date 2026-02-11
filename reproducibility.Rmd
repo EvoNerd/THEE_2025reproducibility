@@ -2,7 +2,7 @@
 ---
 title: "Multiplying numbers from 1 to 10 by a multiplier"
 
-author: "Everyone! :)"
+author: "Everyone!~~ :)"
 date: "Last compiled on `r format(Sys.time(), '%d %B %Y')`"
 output:
   html_document:
