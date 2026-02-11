@@ -1,6 +1,11 @@
+####this is a bug#######
 ---
 title: "Multiplying numbers from 1 to 10 by a multiplier"
+<<<<<<< HEAD
 author: "Hermina &  Luca"
+=======
+author: "Hermina & Coni :) >"
+>>>>>>> daa359ccd9f459586fe230887ab50b6868176856
 date: "Last compiled on `r format(Sys.time(), '%d %B %Y')`"
 output:
   html_document:
